@@ -2,7 +2,7 @@ print('Nos campos:\nSalario Fixo, Porcentagem da Comissão e Vendas no Mês digi
 print('Não precisa comverter a taxa de juros para decimal.')
 print('Digite apenas os valores numéricos')
 print('Utilize ponto ao invés de vírgula para representar números decimais')
-print('O Campo: Nome do funcionário não aceita acentos e pode ser deixado em branco.\n')
+print('O Campo: Nome do funcionário não acentos e pode ser deixado em branco.\n')
 pessoa = input('Nome do Funcionário: ')
 fixo = float(input('\nSalario Fixo: '))
 porcentagem = float(input('\nPorcentagem da Comissão: '))
