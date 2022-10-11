@@ -1,5 +1,0 @@
-Insira os códigos do Google Finance separados por um espaço e o programa se encarregará de gerar uma planilha excell e um pdf com a cotação atual no Google Finance.
-Exemplo:
-Link do google finance que exibe a cotação do dólar: https://www.google.com/finance/quote/USD-BRL
-Código lido pelo programa (independente de maiúsculas ou minúsculas): usd-brl
-Como visto, é só copiar o que vier depois de "quote/"
