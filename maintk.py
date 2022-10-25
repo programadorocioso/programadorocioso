@@ -8,10 +8,13 @@ import base64
 from icone import imagem
 from os import remove
 imagem_icone = base64.b64decode(imagem())
-tmpfl = "icon.ico"
-iconfl = open(tmpfl,'wb')
-iconfl.write(imagem_icone)
-iconfl.close()
+#Remover comentários das linhas abaixo se executando no Windows
+#Por algum motivo muito específico, essas linhas causam erros apenas no Linux
+#Mais especificadamente a linha contendo o método "iconbitmap"
+#tmpfl = "icone.ico"
+#iconfl = open(tmpfl,'wb')
+#iconfl.write(imagem_icone)
+#iconfl.close()
 def main_func(ativos):
     ativos = var.get()
     ativos = ativos.split()
@@ -22,8 +25,8 @@ def main_func(ativos):
     leitura_escrita_excell(dados_planilha)
     xlsx_para_pdf()
 principal = tk.Tk()
-principal.iconbitmap(tmpfl)
-remove(tmpfl)
+#principal.iconbitmap(tmpfl)
+#remove(tmpfl)
 principal.geometry('350x100')
 principal.title("StonksWare")
 var = StringVar(principal)
