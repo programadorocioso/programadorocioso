@@ -1,8 +1,6 @@
-from reportlab.lib import colors
 from reportlab.lib.pagesizes import letter
-from reportlab.platypus import SimpleDocTemplate, Table, TableStyle
+from reportlab.platypus import SimpleDocTemplate, Table
 from openpyxl import Workbook, load_workbook
-import openpyxl
 import os
 def leitura_escrita_excell(linhas):
     if os.path.exists("cotacao.xlsx"):

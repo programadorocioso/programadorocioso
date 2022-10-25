@@ -1,8 +1,6 @@
-from reportlab.lib import colors
 from reportlab.lib.pagesizes import letter
-from reportlab.platypus import SimpleDocTemplate, Table, TableStyle
+from reportlab.platypus import SimpleDocTemplate, Table
 from openpyxl import Workbook, load_workbook
-import openpyxl
 import os
 def leitura_escrita_excell(linhas):
     if os.path.exists("cotacao.xlsx"):
@@ -11,12 +9,9 @@ def leitura_escrita_excell(linhas):
         celula.column_dimensions['A'].widht = 20
         celula.column_dimensions['B'].widht = 20
         celula.column_dimensions['C'].widht = 60
-        #print("Arquivo lido")
         for linha in linhas:
             planilha.active.append(linha)
-        #print("Arquivo atualizado")
     else:
-        #print("Arquivo inexistente")
         planilha = Workbook()
         celula = planilha.active
         celula.column_dimensions['A'].widht = 20
@@ -26,7 +21,6 @@ def leitura_escrita_excell(linhas):
         for linha in linhas:
             celula = planilha.active
             celula.append(linha)
-        #print("Arquivo criado com sucesso")
     planilha.save("cotacao.xlsx")
 def ler_para_lista():
     planilha = load_workbook("cotacao.xlsx")

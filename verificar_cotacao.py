@@ -1,5 +1,4 @@
 from requests_html import HTMLSession
-import lxml
 from bs4 import BeautifulSoup
 classe_cotacao = 'YMlKec fxKbKc'
 def cotacao(ativo):
