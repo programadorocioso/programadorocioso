@@ -1,4 +1,3 @@
-import future_fstrings
 import tkinter as tk
 from tkinter import StringVar
 from verificar_cotacao import cotacao
