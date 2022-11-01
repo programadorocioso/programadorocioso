@@ -38,3 +38,27 @@ def xlsx_para_pdf():
         documento = SimpleDocTemplate("cotacao.pdf", pagesize=letter)
         tabela = Table(dados)
         documento.build([tabela])
+def arquivo_texto(local):
+    texto = open(local,"r").readlines()
+    return texto
+def lista_string(lista):
+    palavras = []
+    for linha in lista:
+        if linha.__contains__(" "):
+            temp = linha.replace("\n","").split()
+            for i in temp:
+                palavras.append(i)
+        else:
+            palavras.append(linha)
+    return palavras
+def string_lista(lista):
+    linha = ""
+    for i in lista:
+        if i.__contains__("\n"):
+            i.replace("\n","")
+        linha = linha+str(i)+" "
+        if i == " ":
+            continue
+        if i == "":
+            continue
+    return linha
