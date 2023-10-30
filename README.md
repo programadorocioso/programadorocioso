@@ -1,1 +1,2 @@
-# He dude! Ytalo here!
+Repositório de projetos pequenos
+Cada branch é um projeto
